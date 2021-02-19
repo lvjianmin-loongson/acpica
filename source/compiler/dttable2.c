@@ -366,6 +366,41 @@ DtCompileMadt (
             InfoTable = AcpiDmTableInfoMadt15;
             break;
 
+        case ACPI_MADT_TYPE_COREINTC:
+
+            InfoTable = AcpiDmTableInfoMadt16;
+            break;
+
+        case ACPI_MADT_TYPE_LIOINTC:
+
+            InfoTable = AcpiDmTableInfoMadt17;
+            break;
+
+        case ACPI_MADT_TYPE_HTINTC:
+
+            InfoTable = AcpiDmTableInfoMadt18;
+            break;
+
+        case ACPI_MADT_TYPE_EIOINTC:
+
+            InfoTable = AcpiDmTableInfoMadt19;
+            break;
+
+        case ACPI_MADT_TYPE_PCHINTC:
+
+            InfoTable = AcpiDmTableInfoMadt20;
+            break;
+
+        case ACPI_MADT_TYPE_MSINTC:
+
+            InfoTable = AcpiDmTableInfoMadt21;
+            break;
+
+        case ACPI_MADT_TYPE_LPCINTC:
+
+            InfoTable = AcpiDmTableInfoMadt22;
+            break;
+
         default:
 
             DtFatal (ASL_MSG_UNKNOWN_SUBTABLE, SubtableStart, "MADT");

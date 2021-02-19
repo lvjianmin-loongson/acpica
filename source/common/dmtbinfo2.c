@@ -737,6 +737,75 @@ ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt15[] =
    ACPI_DMT_TERMINATOR
 };
 
+/* 16: core interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt16[] =
+{
+    {ACPI_DMT_UINT32,   ACPI_MADT16_OFFSET (processor_id),              "processor_id", 0},
+    {ACPI_DMT_UINT32,   ACPI_MADT16_OFFSET (core_id),         "core_id", 0},
+    {ACPI_DMT_UINT32,   ACPI_MADT16_OFFSET (flags),         "flags", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT16_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 17: Legacy I/O interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt17[] =
+{
+    {ACPI_DMT_UINT64,   ACPI_MADT17_OFFSET (address),              "address", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT17_OFFSET (size),         "size", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT17_OFFSET (cascade),           "cascade", 0},
+    {ACPI_DMT_UINT64,   ACPI_MADT17_OFFSET (cascade_map),           "cascade_map", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT17_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 18: HT interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt18[] =
+{
+    {ACPI_DMT_UINT64,   ACPI_MADT18_OFFSET (address),              "address", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT18_OFFSET (size),           "size", 0},
+    {ACPI_DMT_UINT64,   ACPI_MADT18_OFFSET (cascade),           "cascade", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT18_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 19: Extend I/O interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt19[] =
+{
+    {ACPI_DMT_UINT8,   ACPI_MADT19_OFFSET (cascade),         "cascade", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT19_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 20: PCH interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt20[] =
+{
+    {ACPI_DMT_UINT64,   ACPI_MADT20_OFFSET (address),              "address", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT20_OFFSET (size),         "size", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT20_OFFSET (id),         "id", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT20_OFFSET (gsi_base),           "gsi_base", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT20_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 21: MSI controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt21[] =
+{
+    {ACPI_DMT_UINT64,   ACPI_MADT21_OFFSET (msg_address),              "msg_address", 0},
+    {ACPI_DMT_UINT32,   ACPI_MADT21_OFFSET (start),         "start", 0},
+    {ACPI_DMT_UINT32,   ACPI_MADT21_OFFSET (count),           "count", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT21_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
+
+/* 22: LPC interrupt controller */
+ACPI_DMTABLE_INFO           AcpiDmTableInfoMadt22[] =
+{
+    {ACPI_DMT_UINT64,   ACPI_MADT22_OFFSET (address),              "address", 0},
+    {ACPI_DMT_UINT16,   ACPI_MADT22_OFFSET (size),         "size", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT22_OFFSET (cascade),           "cascade", 0},
+    {ACPI_DMT_UINT8,   ACPI_MADT22_OFFSET (version),           "version", 0},
+   ACPI_DMT_TERMINATOR
+};
 
 /*******************************************************************************
  *

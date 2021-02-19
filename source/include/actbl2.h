@@ -718,9 +718,84 @@ enum AcpiMadtType
     ACPI_MADT_TYPE_GENERIC_MSI_FRAME        = 13,
     ACPI_MADT_TYPE_GENERIC_REDISTRIBUTOR    = 14,
     ACPI_MADT_TYPE_GENERIC_TRANSLATOR       = 15,
-    ACPI_MADT_TYPE_RESERVED                 = 16    /* 16 and greater are reserved */
+    ACPI_MADT_TYPE_COREINTC = 16,
+    ACPI_MADT_TYPE_LIOINTC = 17,
+    ACPI_MADT_TYPE_HTINTC = 18,
+    ACPI_MADT_TYPE_EIOINTC = 19,
+    ACPI_MADT_TYPE_PCHINTC = 20,
+    ACPI_MADT_TYPE_MSINTC = 21,
+    ACPI_MADT_TYPE_LPCINTC = 22,
+    ACPI_MADT_TYPE_RESERVED                 = 23    /* 16 and greater are reserved */
 };
 
+/* Core Interrupt Controller */
+
+typedef struct acpi_madt_coreintc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT32 processor_id;
+	UINT32 core_id;
+	UINT32 flags;
+	UINT8 version;
+} ACPI_MADT_COREINTC;
+
+/* Legacy I/O Interrupt Controller */
+
+typedef struct acpi_madt_liointc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT64 address;
+	UINT16 size;
+	UINT8 cascade[2];
+	UINT32 cascade_map[2];
+	UINT8 version;
+} ACPI_MADT_LIOINTC;
+/* Extend I/O Interrupt Controller */
+
+typedef struct acpi_madt_eiointc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT8 cascade;
+	UINT8 version;
+} ACPI_MADT_EIOINTC;
+
+/* PCH Interrupt Controller */
+
+typedef struct acpi_madt_pchintc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT64 address;
+	UINT16 size;
+	UINT16 id;
+	UINT16 gsi_base;
+	UINT8 version;
+} ACPI_MADT_PCHINTC;
+
+/* MSI Controller */
+
+typedef struct acpi_madt_msintc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT64 msg_address;
+	UINT32 start;
+	UINT32 count;
+	UINT8 version;
+} ACPI_MADT_MSINTC;
+
+/* HT Interrupt Controller */
+
+typedef struct acpi_madt_htintc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT64 address;
+	UINT16 size;
+	UINT8 cascade[8];
+	UINT8 version;
+} ACPI_MADT_HTINTC;
+
+/* LPC Interrupt Controller */
+
+typedef struct acpi_madt_lpcintc {
+    ACPI_SUBTABLE_HEADER    Header;
+	UINT64 address;
+	UINT16 size;
+	UINT8 cascade;
+	UINT8 version;
+} ACPI_MADT_LPCINTC;
 
 /*
  * MADT Subtables, correspond to Type in ACPI_SUBTABLE_HEADER

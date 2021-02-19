@@ -808,6 +808,41 @@ AcpiDmDumpMadt (
             InfoTable = AcpiDmTableInfoMadt15;
             break;
 
+        case ACPI_MADT_TYPE_COREINTC:
+
+            InfoTable = AcpiDmTableInfoMadt16;
+            break;
+
+        case ACPI_MADT_TYPE_LIOINTC:
+
+            InfoTable = AcpiDmTableInfoMadt17;
+            break;
+
+        case ACPI_MADT_TYPE_HTINTC:
+
+            InfoTable = AcpiDmTableInfoMadt18;
+            break;
+
+        case ACPI_MADT_TYPE_EIOINTC:
+
+            InfoTable = AcpiDmTableInfoMadt19;
+            break;
+
+        case ACPI_MADT_TYPE_PCHINTC:
+
+            InfoTable = AcpiDmTableInfoMadt20;
+            break;
+
+        case ACPI_MADT_TYPE_MSINTC:
+
+            InfoTable = AcpiDmTableInfoMadt21;
+            break;
+
+        case ACPI_MADT_TYPE_LPCINTC:
+
+            InfoTable = AcpiDmTableInfoMadt22;
+            break;
+
         default:
 
             AcpiOsPrintf ("\n**** Unknown MADT subtable type 0x%X\n\n",

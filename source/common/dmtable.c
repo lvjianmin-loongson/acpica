@@ -344,6 +344,13 @@ static const char           *AcpiDmMadtSubnames[] =
     "Generic MSI Frame",                /* ACPI_MADT_GENERIC_MSI_FRAME */
     "Generic Interrupt Redistributor",  /* ACPI_MADT_GENERIC_REDISTRIBUTOR */
     "Generic Interrupt Translator",     /* ACPI_MADT_GENERIC_TRANSLATOR */
+    "Core Interrupt Controller",     /* ACPI_MADT_COREINTC */
+    "Legacy I/O Interrupt Controller",     /* ACPI_MADT_LIOINTC */
+    "HT Interrupt Controller",     /* ACPI_MADT_HTINTC */
+    "Extend I/O Interrupt Controller",     /* ACPI_MADT_EIOINTC */
+    "PCH Interrupt Controller",     /* ACPI_MADT_PCHINTC */
+    "MSI Controller",     /* ACPI_MADT_MSINTC */
+    "LPC Interrupt Controller",     /* ACPI_MADT_LPCINTC */
     "Unknown Subtable Type"             /* Reserved */
 };
 
